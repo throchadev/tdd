@@ -15,7 +15,7 @@ public class UserControllerTests {
   private MockMvc mockMvc;
 
   @Test
-  public void testarListaUsuario() throws Exception {
+  public void listUserTest() throws Exception {
     this.mockMvc.perform(MockMvcRequestBuilders.get("/user"))
         .andDo(MockMvcResultHandlers.print())
         .andExpect(MockMvcResultMatchers.jsonPath("$").isArray());
